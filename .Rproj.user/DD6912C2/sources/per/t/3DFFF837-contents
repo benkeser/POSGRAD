@@ -1,0 +1,16 @@
+---
+title: "HERCULES Analysis"
+author: "Melissa Chapnick"
+date: "2022-09-24"
+output: html_document
+---
+
+```{r,load data}
+PBDE_location<-here::here("raw_data/Stein PBDEs 9-2-2022.csv")
+PCB_OC_location<-here::here("raw_data/Stein PCBs and OCs 9-2-2022.csv")
+
+PBDEdata<-read.csv(PBDE_location,header = TRUE)
+PCBOCdata<-read.csv(PCB_OC_location,header=TRUE)
+
+```
+

@@ -1,0 +1,7 @@
+raw_data/
+derived_data/POSGRADdata_merge.csv
+reports/
+figures/
+tables/
+*.pdf
+*.zip

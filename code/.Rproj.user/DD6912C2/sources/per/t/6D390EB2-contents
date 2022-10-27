@@ -1,0 +1,6 @@
+### POSGRAD Offspring Cognition 5 years ###
+
+#Confirm Working Directory
+getwd()
+
+##To Do: read in data, examine data, data cleaning, flow chart, Table 1
