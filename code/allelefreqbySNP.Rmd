@@ -80,11 +80,3 @@ kable(POSGRADanalytic%>%
 
 ```
 
-
-```{r}
-#Build table
-
-
-
-```
-

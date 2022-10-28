@@ -1,11 +1,5 @@
----
-title: "POSGRAD Analysis"
-author: "Melissa Chapnick"
-date: "2022-09-24"
-output: html_document
----
-
-```{r, load data}
+library(dplyr)
+library(ggplot2)
 
 #Setting filepaths
 offspringfadslocation<-here::here("raw_data/posgrad_offspring_cleaned_genetic_data.csv")
@@ -18,11 +12,6 @@ offspringfadsdata<-read.csv(offspringfadslocation,header = TRUE)
 cognitivedata<-read.csv(cognitivelocation,header=TRUE)
 breastfeedingdata<-read.csv(breastfeedinglocation, header=TRUE)
 SESHOMEdata<-read.csv(SESHomelocation,header=TRUE)
-
-```
-
-```{r, merge data}
-library(dplyr)
 
 #Checking variable types
 class(offspringfadsdata$folio)
@@ -42,13 +31,8 @@ builddata2<-merge(builddata1,breastfeedingdata, by.x = "folio", by.y = "foliof",
 
 builddata3 <-merge(builddata2,SESHOMEdata, by.x = "folior", by.y = "folio_mom", all.x = TRUE)
 
-
 POSGRADdata_merge<-builddata3
 
-```
-
-```{r}
-library(ggplot2)
 
 #Create analytic sample
 POSGRADdata_merge$analytic= ifelse(POSGRADdata_merge$VPC>=0 & POSGRADdata_merge$rs174602_o_num>=0,1,0)
@@ -68,13 +52,9 @@ missingsample <- subset(POSGRADdata_merge, is.na(POSGRADdata_merge$rs174602_o_nu
 #Analytic data only
 POSGRADdata_merge_analytic<-subset(POSGRADdata_merge, analytic==1)
 
-```
-
-```{r}
 #Save POSGRAD Merged data as CSV
 write.csv(POSGRADdata_merge,file=here::here("derived_data/POSGRADdata_merge.csv"))
 
 #Save POSGRAD Analytic data as CSV
 write.csv(POSGRADdata_merge_analytic,file=here::here("derived_data/POSGRADdata_merge_analytic.csv"))
 
-```
