@@ -21,6 +21,3 @@ To build, run “make reports” in the terminal.
 
 Two separate reports (allelefreqbySNP and McCarthybySNP) will generate
 and be stored in code/.
-
-Report generates tables and figures allele frequencies and child
-cognitive development score distributions.
