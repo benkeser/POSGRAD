@@ -2,4 +2,6 @@ raw_data/
 derived_data/POSGRADdata_merge.csv
 data info/
 code/*.html
+code/sonia/
 2_POSGRAD Analysis/*.Rmd
+.Rproj.user

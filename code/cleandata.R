@@ -40,7 +40,7 @@ POSGRADdata_merge$analytic= ifelse(POSGRADdata_merge$VPC>=0 & POSGRADdata_merge$
 #We have genetic data for 621 children
 table(POSGRADdata_merge$rs174602_o_num>=0)
 
-#Of those 621, 125 are missing VPC score data (621-496), but I do not know how to cross check this because the 
+#Of those 621, 125 are missing VPC score data (621-496), but I do not know how to cross check 
 POSGRADdata_merge$havers174602=ifelse(POSGRADdata_merge$rs174602_o_num>=0,1,0)
 POSGRADdata_merge$haveVPC=ifelse(POSGRADdata_merge$VPC>=0,1,0)
 

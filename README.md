@@ -21,3 +21,8 @@ To build, run “make reports” in the terminal.
 
 Two separate reports (allelefreqbySNP and McCarthybySNP) will generate
 and be stored in code/.
+
+## Restore R Package Environment
+
+To restore R package environment, run "make install" in the terminal.
+

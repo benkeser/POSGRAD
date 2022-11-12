@@ -10,4 +10,6 @@ code/allelefreqbySNP.Rmd code/McCarthybySNP.Rmd \
 derived_data/POSGRADdata_merge_analytic.csv
 	Rscript code/renderreport.R
 
-	
+.PHONY: install
+install: 
+	Rscript -e "renv::restore(prompt = FALSE)"
