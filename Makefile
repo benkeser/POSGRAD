@@ -8,7 +8,8 @@ derived_data/POSGRADdata_merge.csv derived_data/POSGRADdata_merge_analytic.csv &
 ## Build Report
 report: report.Rmd code/renderreport.r \
 allelefreq McCarthy \
-derived_data/POSGRADdata_merge_analytic.csv
+derived_data/POSGRADdata_merge.csv \
+derived_data/POSGRADdata_merge_analytic.csv\
 	Rscript code/renderreport.R
 
 ## Allele Frequency Figures
@@ -21,6 +22,13 @@ McCarthy: code/McCarthybySNP.R \
 derived_data/POSGRADdata_merge_analytic.csv
 	Rscript code/McCarthybySNP.R
 
+## Update R Packages
 .PHONY: install
 install: 
 	Rscript -e "renv::restore(prompt = FALSE)"
+	
+## Build Project Image
+
+## Get project image from DockerHub
+
+## Build report in Docker Container
