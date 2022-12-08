@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 3) Makefile - establishes targets for Make.
 
 ## Report
-To build, run "make reports" in the terminal.
+To build, run "make report" in the terminal.
 
 Two separate reports (allelefreqbySNP and McCarthybySNP) will generate and be stored in code/.
 

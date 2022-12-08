@@ -1,0 +1,58 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = F)
+```
+
+```{r}
+here::i_am("2_POSGRAD analysis/report.Rmd")
+```
+
+### **POSGRAD Descriptive Report**
+**Melissa Chapnick**
+\
+\
+
+#### **Introduction**
+
+The objective of this analysis is to assess whether offspring FADS genotype modifies the impact of prenatal DHA supplementation on global cognitive scores at age 5.
+
+The data to be analyzed were obtained from the POSGRAD trial.The POSGRAD trial is a double-blind randomized controlled trial conducted in Mexico between 2002-2006 that evaluated the impact of prenatal DHA supplementation on infant anthropometric, health, and cognitive outcomes, and assessed the role of FADS genotypes in modifying the impact of supplementation on these outcomes at birth through 11 years of age.
+\
+\
+
+#### **Allele Frequencies by Single Nucleotide Polymorphism**
+\
+In this initial stage of analysis, we will visualize the allele frequencies by single nucleotide polymorphism (SNP) for two SNPs of interest.
+\
+\
+Figure 1 displays the allele frequencies for SNP RS 174602.
+\
+\
+```{r}
+readRDS(file=here::here("2_POSGRAD Analysis/output/figure_174602.rds"))
+
+```
+\
+\
+\
+Figure 2 displays the allele frequencies for SNP RS 1535.
+\
+\
+```{r}
+readRDS(file=here::here("2_POSGRAD Analysis/output/figure_1535.rds"))
+```
+\
+\
+
+#### **McCarthy Score Distributions**
+\
+The following graph examines the distributions of the composite McCarthy score among children enrolled in the POSGRAD trial.
+\
+\
+```{r}
+readRDS(file=here::here("2_POSGRAD Analysis/output/figure_composite.rds"))
+```
+
