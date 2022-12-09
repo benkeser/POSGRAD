@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo = FALSE, message = F)
 ```
 
 ```{r}
-here::i_am("2_POSGRAD analysis/report.Rmd")
+here::i_am("report.Rmd")
 ```
 
 ### **POSGRAD Descriptive Report**
@@ -32,7 +32,7 @@ Figure 1 displays the allele frequencies for SNP RS 174602.
 \
 \
 ```{r}
-readRDS(file=here::here("2_POSGRAD Analysis/output/figure_174602.rds"))
+readRDS(file=here::here("output/figure_174602.rds"))
 
 ```
 \
@@ -42,7 +42,7 @@ Figure 2 displays the allele frequencies for SNP RS 1535.
 \
 \
 ```{r}
-readRDS(file=here::here("2_POSGRAD Analysis/output/figure_1535.rds"))
+readRDS(file=here::here("output/figure_1535.rds"))
 ```
 \
 \
@@ -53,6 +53,6 @@ The following graph examines the distributions of the composite McCarthy score a
 \
 \
 ```{r}
-readRDS(file=here::here("2_POSGRAD Analysis/output/figure_composite.rds"))
+readRDS(file=here::here("output/figure_composite.rds"))
 ```
 
