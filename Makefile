@@ -44,4 +44,4 @@ project_image: dockerfile $(PROJECTFILES) $(RENVFILES)
 
 # Build report automatically in docker container
 final_report/report.html:
-	docker run -v "/$$(pwd)/final_report":/posgrad/final_report posgrad_report
+	docker run -v "/$$(pwd)/final_report":/posgrad/final_report mchapnick/posgrad_report
